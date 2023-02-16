@@ -12,4 +12,7 @@ body{
 .not-connected{
     width: 50%;
     height: auto;
+    @media all and (min-width:variables.$desktop-view) {
+        width: 35%;
+    }
 }

@@ -159,4 +159,9 @@ body {
 .not-connected {
   width: 50%;
   height: auto;
+}
+@media all and (min-width: 1440px) {
+  .not-connected {
+    width: 35%;
+  }
 }/*# sourceMappingURL=styles.css.map */
