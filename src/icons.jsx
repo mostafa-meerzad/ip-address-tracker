@@ -1,7 +1,11 @@
+import img from './assets/connection-error.jpg'
+
 function Arrow() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6"/></svg>
   )
 }
-
-export { Arrow }
+function ConnectionError() {
+  return <img className={"not-connected"} src={img} alt="Connection Error" />
+}
+export { Arrow, ConnectionError }
