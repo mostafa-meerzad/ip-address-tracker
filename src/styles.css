@@ -1,8 +1,10 @@
 .header {
-  height: 20rem;
+  height: 14rem;
   text-align: center;
   padding: 2rem;
   background-image: url("/pattern-bg.png");
+  background-position: center;
+  background-size: cover;
 }
 .header__title {
   margin: 0;
@@ -68,9 +70,75 @@
   font-weight: 700;
 }
 
+@media all and (min-width: 650px) {
+  .search,
+.details {
+    width: 33rem;
+    box-sizing: border-box;
+  }
+}
+@media all and (min-width: 1440px) {
+  .header {
+    height: 14rem;
+    padding: 3rem;
+  }
+  .header__title {
+    font-size: 2rem;
+  }
+  .search {
+    width: 35rem;
+    box-sizing: border-box;
+    margin: 2rem auto;
+  }
+  .search__input {
+    width: 90%;
+  }
+  .search__btn {
+    width: 10%;
+  }
+  .details {
+    width: 80%;
+    min-height: 8rem;
+    margin-top: 3.3rem;
+    padding: 1.1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .details__field {
+    width: 20%;
+    text-align: start;
+    margin-inline: 1rem;
+    gap: 1rem;
+  }
+  .details__field:nth-child(4)::after, .details__field:nth-child(2)::after, .details__field:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 45%;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: -2.5%;
+    background-color: #ccc;
+  }
+  .details__title {
+    font-size: 0.75rem;
+  }
+  .details__info {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
 .main {
-  height: 70vh;
+  height: 80vh;
+  min-height: 40rem;
   isolation: isolate;
+}
+.main.disconnected {
+  background-color: hsl(0deg, 0%, 97%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .leaflet-container {
@@ -86,4 +154,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: Rubik, sans-serif;
+}
+
+.not-connected {
+  width: 50%;
+  height: auto;
 }/*# sourceMappingURL=styles.css.map */

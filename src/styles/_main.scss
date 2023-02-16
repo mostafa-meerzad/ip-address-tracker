@@ -1,10 +1,16 @@
 @use "./variables";
 
 .main {
-  height: 70vh;
+  height: 80vh;
+  min-height: 40rem;
   isolation: isolate;
-//   z-index: -1
-// border: 2px solid red;
+  
+  &.disconnected{
+    background-color: hsl(0, 0%, 97%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .leaflet-container {
     width: 100%;
