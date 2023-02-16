@@ -1,0 +1,17 @@
+@use "./variables";
+
+.main {
+  height: 70vh;
+  isolation: isolate;
+//   z-index: -1
+// border: 2px solid red;
+}
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+    & > * {
+    // add width and height to everything inside leaflet-container to make it work otherwise it shows a gray screen
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,82 @@
+@use "./variables";
+
+.header {
+  height: 20rem;
+  text-align: center;
+  padding: 2rem;
+  background-image: url("/pattern-bg.png");
+
+  &__title {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: variables.$white;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem auto;
+
+  &__input,
+  &__btn {
+    height: 3.5rem;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  &__input {
+    width: 85%;
+    padding: 0 1.5rem;
+    border-radius: variables.$border-radius 0 0 variables.$border-radius;
+    font-size: 1rem;
+    color: variables.$dark-gray;
+  }
+  &__btn {
+    display: grid;
+    place-content: center;
+    width: 15%;
+    border-radius: 0 variables.$border-radius variables.$border-radius 0;
+    background-color: variables.$black;
+  }
+}
+
+.details {
+  border-radius: variables.$border-radius;
+  background-color: variables.$white;
+  list-style-type: none;
+  padding: 0.5rem 4rem;
+  margin: 0 auto;
+  z-index: 100;
+  position: sticky;
+//   width: 100%;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 1.3rem 0;
+  }
+
+  &__title,
+  &__info {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: variables.$dark-gray;
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+
