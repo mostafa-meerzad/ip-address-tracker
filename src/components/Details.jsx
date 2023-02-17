@@ -1,8 +1,12 @@
 import React from 'react'
 
 function Details({info}) {
+
+  console.log(info);
   return (
-    <ul className='details'>
+    // add a key prop to the details section in order to show new data every time
+    // otherwise it breaks
+    <ul className='details' key={info[0].value}>
 {
     info.map(({name, value}) => {
         return <li className="details__field" key={value}>
