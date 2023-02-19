@@ -8,8 +8,7 @@ function Search({ callback }) {
       <input
         type="text"
         className="search__input"
-        placeholder="Search for any IP address or domain
-        "
+        placeholder="Search for any IP address or domain"
         onChange={(e) => {
           setSearch(e.target.value);
         }}
